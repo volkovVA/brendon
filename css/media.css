@@ -1,0 +1,224 @@
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .head_bg .mnu_line .logo {
+    text-align: left; }
+  .logo_img a {
+    background: transparent url('../<?php echo B_IMG_DIR ?>/logo.png') no-repeat center center; }
+  footer .logo a {
+      color: #588792; }
+  .head_bg .content_head .scroll_bottom {
+    padding-top: 20%; }
+  .blog-section-bg .blog-content,
+  .blog-single-bg .blog-content {
+    margin-right: 0px;
+} }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 640px) {
+
+  .small_screen {
+    padding: 20px 10px;
+    text-align: center;
+  } 
+
+  section .section_header {
+    margin-bottom: 45px;
+  }
+
+  section .section_header h2::before {
+    margin-top: 11px;
+    width: 25%;
+  }
+
+  section .section_header h2::after {
+    margin-top: 11px;
+    width: 25%;
+  }
+
+  section .section_header h2 {
+    font-size: 2rem;
+  }
+
+  #about .about_block img {
+    top: -1px;
+  }
+
+  #about .about_block .col-md-3 {
+    padding: 20px 0;
+  }
+
+  .portfolio_filter ul li {
+    float: none;
+    margin: 10px 0;
+  }
+
+  .blog_block {
+    margin-bottom: 50px;
+  }
+
+  .blog_read_more {
+    padding-top: 0;
+  }
+
+  #contact {
+    padding: 50px 0 40px 0;
+  }
+  #contact .contact_block .col-md-4 {
+    padding: 20px 0;
+  }
+  #contact .contact_block img {
+    top: 6px;
+  }
+  #contact .contact_block_border {
+    margin: 0 33px;
+    padding: 36px 10px;
+  }
+  .toggle-mnu {
+    right: 22px;
+    top: 3px;
+}
+.toggle-mnu span, .toggle-mnu span::after, .toggle-mnu span::before {
+    background-color: #000;
+    height: 3px;
+}
+.head_bg .overlay_color,
+.blog_head_bg .overlay_color {
+  background: #fff;
+  z-index: 10;
+}
+
+.blog-wrapper .blog-content .content-box .content {
+  padding: 0 10px 0 10px;
+}
+.blog-wrapper .blog-content .content-box .content .blog-buttons{
+  padding: 0 0 20px 0;
+}
+.blog-wrapper .blog-content .content-box .content .blog-buttons a i {
+  opacity: 1;
+}
+
+.blog_head_bg .content_head .content_bottom_txt p{
+  line-height: 1.6;
+  padding-top: 20px;
+}
+.blog-content .info .blog-list li {
+  border-bottom: solid 1px #EAEAEA;
+  width: 100%;
+  border-right: solid 0px #EAEAEA;
+}
+.blog-content .share ul {
+  padding: 10px 25px 5px 25px !important;
+}
+.media-body, .media-left, .media-right {
+  display: table-row;
+}
+.blog-content .comment .media .blog-text-uppercase {
+ padding: 15px 0 0 0; 
+}
+
+.blog-content .comment .media .list-inline > li {
+  padding: 0;
+}
+
+.form-group {
+  padding-top: 20px;
+}
+
+.blog-section-bg .form-group {
+  padding-top: 0px;
+}
+
+.blog-single-bg .search-form .btn-search {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    }
+  #contact {
+    padding: 50px 0 25px 0;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+  .blog_block { 
+    width: 370px; 
+    margin: auto; 
+  }
+
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+.breadcrumb { padding: 20px 0; }
+
+.blog-pagination li.back:after { 
+  display: none; 
+}
+
+.blog-pagination li:not(.arrow) { 
+  display: inline-block; 
+} 
+
+.blog-wrapper .blog-pagination { 
+  border: solid 1px #EAEAEA; 
+  padding: 15px 0;
+  }
+
+.blog_block { 
+  width: auto; 
+  padding-top: 0; 
+}
+
+.blog_block 
+.brief-content { 
+  width: 350px; 
+  position: absolute; 
+  top: 40px; 
+  right: 0; 
+  margin-left: 0; 
+  margin-right: 0; 
+}
+
+.blog_block 
+.blog-img-frame { 
+  position: relative; 
+}
+
+.blog-wrapper .single-blog { 
+  padding-top: 80px; 
+  padding-bottom: 80px;
+  }
+
+  /**/ }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }
+
+@media only screen and (min-width: 1600px) {
+  .head_bg .content_head .scroll_bottom {
+    padding-top: 17%; } }

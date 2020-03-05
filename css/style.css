@@ -308,6 +308,7 @@ section .section_header h2::after {
   background: #000;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
+  line-height: 3px;
 }
 
 

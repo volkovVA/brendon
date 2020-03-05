@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html <?php bloginfo( 'language' ); ?>>
 <head>
-	<meta charset="utf-8">
-	<title>Brendon - Professional Photographer</title>
-	<meta name="description" content="">
+	<meta charset=<?php bloginfo( 'charset' ); ?>">
+	<title><?php bloginfo( 'name' ); ?></title>
+	<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -52,17 +52,14 @@
 							</div>
 						</div>
 
-
 						<!--Desktop Main Menu-->
 						<div class="col-md-10 col-sm-10 col-xs-0">
 							<div class="nav_block">
 								<div class="mnu hidden-xs">
-									<ul>
-										<li><a href="#home">Home</a></li>
-										<li><a href="#about">About</a></li>
-										<li><a href="#portfolio">Portfolio</a></li>
-										<li><a href="#blog">Blog</a></li>
-										<li><a href="#contact">Contact</a></li>
+									<?php wp_nav_menu([
+										'theme_location'  => 'top',
+										'container'       => null, 
+									]); ?>
 										<li class="lamp"><span></span></li>
 									</ul>
 								</div>
@@ -72,13 +69,10 @@
 						<!--Mobile Main Menu-->
 						<div class="col-xs-12 top_mnu">
 							<div class="mnu_menu">
-								<ul>
-									<li><a href="#home">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="#portfolio">Portfolio</a></li>
-									<li><a href="#contact">Blog</a></li>
-									<li><a href="#contact">Contact</a></li>
-								</ul>
+								<?php wp_nav_menu([
+									'theme_location'  => 'mob',
+									'container'       => null, 
+								]); ?>
 							</div>
 						</div>
 						<!--End Mobile Main Menu-->

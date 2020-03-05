@@ -11,7 +11,7 @@
 
     function up_style() {
 	    wp_enqueue_style( 'main', B_CSS_DIR . '/style.css');
-	    wp_enqueue_style( 'media', B_CSS_DIR . '/media.css');
+	    wp_enqueue_style( 'mediacss', B_CSS_DIR . '/media.css');
         wp_enqueue_style( 'fonts', B_CSS_DIR . '/fonts.min.css');
         wp_enqueue_style( 'animate', B_CSS_DIR . '/animate/animate.css');
 	    wp_enqueue_style( 'bootstrap', B_CSS_DIR . '/bootstrap/bootstrap.min.css');
@@ -34,4 +34,13 @@
         wp_enqueue_script( 'wow', B_JS_DIR . '/wow/wow.min.js');
         wp_enqueue_script( 'functions', B_JS_DIR . '/functions.js');
         wp_enqueue_script( 'send', B_JS_DIR . '/send.js');
+}
+
+add_action( 'after_setup_theme', 'top_menu' );
+function top_menu() {
+	register_nav_menu( 'top', 'Верхнее меню' );
+}
+add_action( 'after_setup_theme', 'mobile_menu' );
+function mobile_menu() {
+	register_nav_menu( 'mob', 'Мобильное меню' );
 }

@@ -12,7 +12,7 @@
   .head_bg .mnu_line .logo {
     text-align: left; }
   .logo_img a {
-    background: transparent url('../<?php echo B_IMG_DIR ?>/logo.png') no-repeat center center; }
+    background: transparent url('../img/logo.png') no-repeat center center; }
   footer .logo a {
       color: #588792; }
   .head_bg .content_head .scroll_bottom {

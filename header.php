@@ -39,7 +39,7 @@
 	</div>
 
 	<!-- Header -->
-	<header id="home" class="head_bg" data-parallax="scroll" data-bleed="200" data-z-index="-100" data-speed="0.1" data-image-src="<?php echo B_IMG_DIR ?>//first_screen_bg.jpg" data-over-scroll-fix="true">
+	<header id="home" class="head_bg" data-parallax="scroll" data-bleed="200" data-z-index="-100" data-speed="0.1" data-image-src="<?php header_image(); ?>" data-over-scroll-fix="true">
 		<div class="overlay_color">
 			<div class="mnu_line">
 				<div class="container">
@@ -47,8 +47,12 @@
 						<div class="col-md-2 col-sm-2 col-xs-12">
 							<div class="logo_block">
 								<a href="#" class="toggle-mnu hidden-lg hidden-md hidden-sm"><span></span></a> <!-- toogle menu for small screen -->
-								<!--<h1 class="logo_img"><a class="none" href="">Brendon - Personal HTML Template For Creative Professionals</a></h1>--><!-- Delete comment -->
-								<h1 class="logo"><a href="index.html">B.</a></h1><!-- Change logo text -->
+								<?php if( has_custom_logo() ) {
+									the_custom_logo();
+								} else { ?>
+									<h1 class="logo_img"><a class="none" href=""></a></h1>
+								<?php } ?>
+								<!-- <h1 class="logo"><a href="index.html">B.</a></h1>Change logo text -->
 							</div>
 						</div>
 
@@ -95,7 +99,7 @@
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12 clearfix">
 							<div class="content_download">
-								<p><a href="download/CV.doc" download>Download CV</a></p>
+								<p><?php echo do_shortcode('[download id="25"]'); ?></p>
 							</div>
 						</div>	
 					</div><!-- end row -->

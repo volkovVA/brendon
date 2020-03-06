@@ -249,6 +249,7 @@ section .section_header h2::after {
 .head_bg .mnu_line .row, 
 .blog_head_bg .mnu_line .row{
   border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+  padding: 11px 0;
 }
 
 .head_bg .mnu_line .row .col-sm-10, 
@@ -303,12 +304,12 @@ section .section_header h2::after {
 .head_bg .mnu_line .mnu .lamp, 
 .blog_head_bg .mnu_line .mnu .lamp {
   position: absolute !important;
-  height: 4px;
+  height: 5px;
   bottom: -1px;
   background: #000;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
-  line-height: 3px;
+  line-height: 5px;
 }
 
 
@@ -564,7 +565,7 @@ display: block;
 }
 
 .logo_img a {
-  background: transparent url('../<?php echo B_IMG_DIR ?>/logo.png') no-repeat left center;
+  background: transparent url('../img/logo.png') no-repeat left center;
   height: 60px;
   display: block;
 }

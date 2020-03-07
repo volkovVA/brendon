@@ -55,3 +55,47 @@ add_theme_support( 'custom-header', array(
 	'uploads'       => true,
 ) );
 
+add_action( 'init', 'register_post_types' );
+function register_post_types(){
+	register_post_type('hello', array(
+		'label'  => null,
+		'labels' => array(
+			'name'               => 'Приветствие', // основное название для типа записи
+			'singular_name'      => 'Приветствие', // название для одной записи этого типа
+			'add_new'            => 'Добавить приветствие', // для добавления новой записи
+			'add_new_item'       => 'Добавление приветствия', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование приветствия', // для редактирования типа записи
+			'new_item'           => 'Новое приветствие', // текст новой записи
+			'view_item'          => 'Смотреть приветствие', // для просмотра записи этого типа.
+			'search_items'       => 'Искать приветствие', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Приветствие в банере', // название меню
+		),
+		'public'              => false,
+		'show_ui'             => true, // зависит от public
+		'menu_icon'           => "dashicons-format-status", 
+		'supports'            => [ 'title', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+	) );
+}
+
+function getHello() {
+
+    $args = array(
+        'orderby'     => 'date',
+        'order'       => 'ASC',
+        'post_type'   => 'hello',
+    );
+
+    $bannerTexts = [];
+
+    foreach (get_posts($args) as $post) {
+        $bannerText = get_fields($post->ID);
+        $bannerText["title"] = $post->post_title;
+        $bannerText["content"] = $post->post_content;
+        $bannerTexts[] = $bannerText;
+    }
+
+   return $bannerTexts; 
+}

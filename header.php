@@ -86,17 +86,19 @@
 			<div class="content_head">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="content_name">
-								<p class="hello">WELCOME. I AM</p>
-								<p class="name">BRENDON WILLIAMS</p>
+						<?php foreach (getHello() as $bannerText): ?>	
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="content_name">
+									<p class="hello"><?php echo $bannerText["title"] ?></p>
+									<p class="name"><?php echo $bannerText["content"] ?></p>
+								</div>
+							</div>	
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="content_prof">
+									<p><span><?php echo $bannerText["description"] ?></span></p>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="content_prof">
-								<p><span>The best designer ever.</span></p>
-							</div>
-						</div>
+						<?php endforeach; ?>	
 						<div class="col-md-12 col-sm-12 col-xs-12 clearfix">
 							<div class="content_download">
 								<p><?php echo do_shortcode('[download id="25"]'); ?></p>

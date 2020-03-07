@@ -1,6 +1,13 @@
 "use strict";
 $(window).on( 'load', function() {
 
+	/*------------------CountUp------------------*/
+
+$('.counter').countUp({
+	'time': 2000,
+	'delay': 10
+  });
+
 	/*------------------ Hover Main Menu ------------------*/
 	if($('.mnu>ul>li').hasClass('selected')){
 		$('.selected').addClass('active');
@@ -114,13 +121,5 @@ $(window).on( 'load', function(){
 	$(".content_download p").addClass('animated zoomIn');
 
 }); 
-
-/*------------------CountUp------------------*/
-
-$('.counter').countUp({
-  'time': 2000,
-  'delay': 10
-});
-
 
 	

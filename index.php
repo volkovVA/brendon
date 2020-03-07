@@ -13,11 +13,11 @@
 				</div>
 				<div class="col-md-3 col-sm-3 small_screen wow fadeInUp" data-wow-delay="0.6s">
 					<p>Call me</p><!-- Change text -->
-					<p><span>+123 3456 7890</span></p><!-- Change text -->
+					<p><span><?php the_field("phone") ?></span></p><!-- Change text -->
 				</div>
 				<div class="col-md-3 col-sm-3 small_screen wow fadeInUp" data-wow-delay="0.8s">
 					<p>Email me</p><!-- Change text -->
-					<p><span>brendon@mail.com</span></p><!-- Change text -->
+					<p><span><?php the_field("email") ?></span></p><!-- Change text -->
 				</div>
 			</div><!-- end row -->
 		</div><!-- end container -->
@@ -34,13 +34,13 @@
 					<h2>About me</h2>
 				</div>
 				<div class="col-md-4 col-sm-4 small_screen wow fadeInUp" data-wow-delay="0.2s">
-					<p>Hello, I’m Brendon, Creative Designert & User Experience Engineer based in New York – I create web digital products with professional skills and love.</p>
+					<p><?php the_field("text_1") ?></p>
 				</div>
 				<div class="col-md-4 col-sm-4 small_screen wow fadeInUp" data-wow-delay="0.4s">
-					<p>Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem laudantium, totam rem aperiam, eaque ip quae ab illo inventore veritatis et quasi.</p>
+					<p><?php the_field("text_2") ?></p>
 				</div>
 				<div class="col-md-4 col-sm-4 small_screen wow fadeInUp" data-wow-delay="0.6s">
-					<p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia et consequuntur magni perspiciatis unde.</p>
+					<p><?php the_field("text_3") ?></p>
 				</div>
 			</div><!-- end row -->
 			<div class="row about_block">
@@ -82,19 +82,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-3">
-					<span class="counter">76</span>
+					<span class="counter"><?php the_field("clients") ?></span>
 					<p>HAPPY CLIENTS</p>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<span class="counter">244</span>
+					<span class="counter"><?php the_field("projects") ?></span>
 					<p>PROJECTS COMPLETED</p>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<span class="counter">27</span>
+					<span class="counter"><?php the_field("concepts") ?></span>
 					<p>NEW CONCEPTS</p>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<span class="counter">11</span>
+					<span class="counter"><?php the_field("awards") ?></span>
 					<p>AWARDS WON</p>
 				</div>
 			</div><!-- end row -->

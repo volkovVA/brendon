@@ -122,31 +122,23 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="isotope_items row">
+						<?php if (have_posts()) : query_posts('cat=4');
+							while(have_posts()) : the_post(); ?>
 						<!-- Item -->
-						<a href="<?php echo B_IMG_DIR ?>/portfolio/work-1.jpg" class="single_item link development col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-							<img src="<?php echo B_IMG_DIR ?>/portfolio/work-1.jpg" alt=""> 
+						<a href="<?php the_post_thumbnail_url(array(360,360)); ?>" class="single_item link col-md-4 col-sm-6 wow fadeInUp
+							<?php $tags = wp_get_post_tags($post->ID);
+							if ($tags) {
+								foreach ($tags as $tag) {
+									echo ' ' . $tag->name;
+								}
+							}
+							?>" data-wow-delay="0.3s">
+							<img src="<?php 
+								$large_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+								echo $large_image_url[0];	 
+							?>" alt=""> 
 						</a>
-						<!-- Item -->
-						<a href="<?php echo B_IMG_DIR ?>/portfolio/work-2.jpg" class="single_item link aplication col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
-							<img src="<?php echo B_IMG_DIR ?>/portfolio/work-2.jpg" alt=""> 
-						</a>
-						<!-- Item -->
-						<a href="<?php echo B_IMG_DIR ?>/portfolio/work-3.jpg" class="single_item link development col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-							<img src="<?php echo B_IMG_DIR ?>/portfolio/work-3.jpg" alt=""> 
-						</a>
-						<!-- Item -->
-						<a href="<?php echo B_IMG_DIR ?>/portfolio/work-4.jpg" class="single_item link web-design col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.2s">
-							<img src="<?php echo B_IMG_DIR ?>/portfolio/work-4.jpg" alt=""> 
-						</a>
-						<!-- Item -->
-						<a href="<?php echo B_IMG_DIR ?>/portfolio/work-5.jpg" class="single_item link aplication col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.5s">
-							<img src="<?php echo B_IMG_DIR ?>/portfolio/work-5.jpg" alt=""> 
-						</a>
-						<!-- Item -->
-						<a href="<?php echo B_IMG_DIR ?>/portfolio/work-6.jpg" class="single_item link aplication col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.8s">
-							<img src="<?php echo B_IMG_DIR ?>/portfolio/work-6.jpg" alt=""> 
-						</a>
-
+						<?php endwhile; endif; wp_reset_query(); ?> 
 						<!-- Add new image -->
 
 					</div>

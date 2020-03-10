@@ -135,3 +135,14 @@ function getHello() {
 
    return $bannerTexts; 
 }
+
+add_action( 'widgets_init', 'register_my_widgets' );
+function register_my_widgets(){
+	register_sidebar( array(
+		'name'          => 'Right sidebar',
+		'id'            => "sidebar-right",
+		'description'   => 'Description',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div><div class="space x-small"></div>',
+	) );
+}

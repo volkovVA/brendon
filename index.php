@@ -203,7 +203,7 @@
 					</div>
 				</div>
 				<div class="blog_read_more wow zoomIn" data-wow-delay="0.2s">
-					<a href="blog-page.html">read more</a>
+					<a href="http://wpdev/blog">read more</a>
 				</div>
 				<!--.row-->
 			</div>

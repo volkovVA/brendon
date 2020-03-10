@@ -1053,7 +1053,7 @@ footer {
   overflow: hidden;
   z-index: 11; 
   height: 400px;
-  background: url('../<?php echo B_IMG_DIR ?>/blog_bg.jpg') no-repeat center center;
+  background: url('../img/blog_bg.jpg') no-repeat center center;
 }
 
 .blog_head_bg .content_head {
@@ -1276,6 +1276,10 @@ overflow: hidden;
 
 /* Sidebar */
 
+.widgettitle {
+  margin-bottom: 10px;
+}
+
 .search-form .form-group { 
   position: relative; 
 }
@@ -1316,24 +1320,54 @@ overflow: hidden;
 .sidebar-menu .search-form .form-group input { 
   border-color: transparent; 
   background-color: #F4F4F4; 
+  z-index: -1;
 }
 
-.sidebar-menu .catagory .menu-right li { 
-  position: relative; 
+.sidebar-menu .search-form .form-group:after { 
+  content: '';
+  background-image: url(../img/search.ico);
+  position:absolute;
+  display:block;
+  width: 13px;
+  height: 15px;
+  top: calc(50% - 7.5px);
+  right: 6%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer; 
 }
 
-.sidebar-menu .catagory .menu-right li a { 
+.cat-item:after {
+  content: '';
+  background-image: url(../img/arrow.ico);
+  position:absolute;
+  display:block;
+  width: 15px;
+  height: 15px;
+  top: calc(50% - 7.5px);
+  right: 6%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer; 
+}
+
+.sidebar-menu .widget_categories ul li { 
+  position: relative;
+  border-bottom: 1px solid #EAEAEA;   
+}
+
+.sidebar-menu .widget_categories ul li a { 
   display: block; 
   padding-left: 0; 
   padding-right: 0; 
 }
 
-.sidebar-menu .catagory .menu-right li a:hover, 
-.sidebar-menu .catagory .menu-right li :focus { 
+.sidebar-menu .widget_categories ul li a:hover, 
+.sidebar-menu .widget_categories ul li :focus { 
   background: transparent; 
 }
 
-.sidebar-menu .catagory .menu-right li i { 
+.sidebar-menu .widget_categories ul li i { 
   position: absolute; 
   right: 0;
   padding: 3px 0;
@@ -1383,12 +1417,12 @@ overflow: hidden;
   padding: 20px 0;
 }
 
-.sidebar-menu .catagory .menu-right li a:hover, 
-.sidebar-menu .catagory .menu-right li :focus {
+.sidebar-menu .widget_categories ul li a:hover, 
+.sidebar-menu .widget_categories ul li :focus {
   background: transparent;
 }
 
-.menu-right li a {
+.widget ul li a {
   padding: 12px 15px 12px 30px;
   font-size: 1.4rem;
 }
@@ -1404,7 +1438,7 @@ overflow: hidden;
     overflow: hidden;
 }
 
-.menu-right li a {
+.widget ul li a {
     display: block;
     padding: 12px;
 }

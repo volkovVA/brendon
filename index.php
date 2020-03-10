@@ -254,19 +254,7 @@
 					<div class="col-md-2"></div>
 					<div class="col-md-8">
 						<div class="contact_form">
-							<form method="post" action="" id="ajaxform">
-								<fieldset class="wow zoomIn padding_r">
-									<input id="name" name="name" type="text" placeholder="Name" required="required" val="" />
-								</fieldset>
-								<fieldset class="wow zoomIn padding_l">
-									<input id="email" name="email" type="text" placeholder="E-mail" required="required" val="" />
-								</fieldset>
-								<div class="textarea_block wow zoomIn">
-									<textarea id="message" name="message" rows="5" placeholder="Message..." required="required" val="" ></textarea>
-									<div id="messegeResult" class="wow zoomIn">
-									<input id="button" type="submit" value="SEND A MESSAGE"/></div>
-								</div>
-							</form>
+							<?php echo do_shortcode( '[contact-form-7 id="89" title="Контактная форма 1"]' ) ?>
 						</div>
 					</div>
 					<div class="col-md-2"></div>

@@ -1200,6 +1200,10 @@ overflow: hidden;
     padding-bottom: 7px;
   }
 
+.pagination {
+  width: 100%;
+}
+
 .blog-pagination { 
   margin: 0; 
   padding: 0; 
@@ -1213,7 +1217,7 @@ overflow: hidden;
   padding: 5px; 
 }
 
-.blog-pagination li.active { 
+.blog-pagination span.current { 
   color: #000; 
   cursor: pointer; 
 }

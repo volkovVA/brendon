@@ -25,9 +25,8 @@
                                     'category__not_in' => '7',
                                     'paged' => get_query_var('paged') ?: 1
                                 );
-                            ?>
-                            <?php wp_reset_query(); $query = new WP_Query($query_args); ?>    
-                            <?php if($query->have_posts()){ while ($query->have_posts()) {$query->the_post(); ?>
+                            ?>   
+                            <?php if(have_posts()){ while (have_posts()) {the_post(); ?>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="content-box">
                                         <div class="blog-img-frame">
@@ -52,7 +51,6 @@
                                 </div>
                             <?php } ?>
                             <?php
-                                $wp_query = $query;
                                 the_posts_pagination(
                                     $args = array(
                                         'show_all'     => true, // показаны все страницы участвующие в пагинации

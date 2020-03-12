@@ -1486,7 +1486,7 @@ overflow: hidden;
 }
 
 .blog-single-bg form {
-  padding: 0 25px;
+  padding: 0;
 }
 
 
@@ -1607,6 +1607,7 @@ overflow: hidden;
 
 .blog-content .comment {
   border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 25px;
 }
 
 .padding_r {
@@ -1685,7 +1686,7 @@ overflow: hidden;
 }
 
 .blog-wrapper .blog-comment h4 { 
-    padding: 0 25px;
+    padding: 0;
 }
 
 .blog-comment #messegeResult {

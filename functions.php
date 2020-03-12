@@ -72,8 +72,7 @@
         
         // wp_enqueue_script( 'html5shiv', B_JS_DIR . '/html5shiv-master/html5shiv.js');
         // wp_enqueue_script( 'slideout', B_JS_DIR . '/slideout/slideout.min.js');
-
-}
+    }
 
 add_action( 'after_setup_theme', 'top_menu' );
 function top_menu() {

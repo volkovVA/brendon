@@ -156,3 +156,21 @@ function my_navigation_template( $template, $class ){
     </div>        
 	';
 }
+
+add_shortcode('my_shortcode', 'new_content');
+
+function new_content() {
+    return "Не забудь поделиться постом!";
+}
+
+function Generate_iframe( $atts ) {
+	$atts = shortcode_atts( array(
+		'href'   => 'http://wp-kama.com',
+		'height' => '550px',
+		'width'  => '300px',     
+	), $atts );
+
+	return '<iframe src="'. $atts['href'] .'" width="'. $atts['width'] .'" height="'. $atts['height'] .'"> <p>Your Browser does not support Iframes.</p></iframe>';
+}
+add_shortcode('iframe', 'Generate_iframe');
+// использование: [iframe href="http://www.exmaple.com" height="480" width="640"]

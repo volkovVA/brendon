@@ -9,7 +9,7 @@
 				</div>
 				<div class="col-md-3 col-sm-3 small_screen wow fadeInUp" data-wow-delay="0.4s">
 					<p>Call or email me</p><!-- Change text -->
-					<p><span>right now.</span></p><!-- Change text -->
+					<p><span>right now</span></p><!-- Change text -->
 				</div>
 				<div class="col-md-3 col-sm-3 small_screen wow fadeInUp" data-wow-delay="0.6s">
 					<p>Call me</p><!-- Change text -->
@@ -158,49 +158,40 @@
 				</div>
 				<!-- End Title -->
 				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<div class="blog_block">
-							<div class="blog-img-frame wow slideInLeft" data-wow-delay="0.3s">
-								<a href="blog-single.html" class="blog-img">
-									<img src="<?php echo B_IMG_DIR ?>/img-1.jpg" alt="">
-								</a>
-							</div>
-							<!--./blog-img-frame-->
+					<?php
+						$args = array(
+							'numberposts' => 2,
+							'post_type' => 'post',
+							'suppress_filters' => true,
+						);
+						$posts = get_posts($args);
+						foreach($posts as $post) {
+							?>
+								<div class="col-md-6 col-sm-6">
+									<div class="blog_block">
+										<div class="blog-img-frame wow slideInLeft" data-wow-delay="0.3s">
+											<a href="<?php the_permalink(); ?>" class="blog-img">
+												<?php the_post_thumbnail(array(360,360)); ?>
+											</a>
+										</div>
+										<!--./blog-img-frame-->
 
-							<div class="brief-content wow slideInRight" data-wow-delay="0.3s">
-								<h4 class="brief-title"><a href="blog-single.html">Creating your own website</a></h4>
-								<p class="brief-date">Brendon Williams - 27 January 2017</p>
-								<p class="brief">Hello, I’m Brendon, Creative Designer & User Experience Engineer based in New York – I create awesome web digital products. I know you can too. You can read my journal to improve yourself.</p>
-								<div class="blog-buttons">
-								<a href="blog-single.html">Read more<i class="fa fa-long-arrow-right"></i></a>
+										<div class="brief-content wow slideInRight" data-wow-delay="0.3s">
+											<h4 class="brief-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+											<p class="brief-date"><?php the_author(); ?> - <?php echo get_the_date('j F Y') ?></p>
+											<?php the_excerpt(); ?>
+											<div class="blog-buttons">
+											<a href="<?php the_permalink(); ?>">Read more<i class="fa fa-long-arrow-right"></i></a>
+											</div>
+										</div>
+										<!--./brief-content-->
+									</div>
+									<!-- /.blog_block -->
 								</div>
-							</div>
-							<!--./brief-content-->
-						</div>
-						<!-- /.blog_block -->
-					</div>
-					<!-- /.col-md-6 -->
-					<div class="col-md-6 col-sm-6">
-						<div class="blog_block">
-							<div class="blog-img-frame wow slideInLeft" data-wow-delay="0.3s">
-								<a href="blog-single.html" class="blog-img">
-									<img src="<?php echo B_IMG_DIR ?>/img-2.jpg" alt="">
-								</a>
-							</div>
-							<!--./blog-img-frame-->
-
-							<div class="brief-content wow slideInRight" data-wow-delay="0.3s">
-								<h4 class="brief-title"><a href="blog-single.html">Creating your own website</a></h4>
-								<p class="brief-date">Brendon Williams - 27 January 2017</p>
-								<p class="brief">Hello, I’m Brendon, Creative Designer & User Experience Engineer based in New York – I create awesome web digital products. I know you can too. You can read my journal to improve yourself.</p>
-								<div class="blog-buttons">
-									<a href="blog-single.html">Read more<i class="fa fa-long-arrow-right"></i></a>
-								</div>
-							</div>
-							<!--./brief-content-->
-						</div>
-						<!-- /.blog_block -->
-					</div>
+							<?php
+						}
+						wp_reset_postdata();
+					?>	
 				</div>
 				<div class="blog_read_more wow zoomIn" data-wow-delay="0.2s">
 					<a href="http://wpdev/blog">read more</a>

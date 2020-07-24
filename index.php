@@ -13,11 +13,11 @@
 				</div>
 				<div class="col-md-3 col-sm-3 small_screen wow fadeInUp" data-wow-delay="0.6s">
 					<p>Call me</p><!-- Change text -->
-					<p><span><?php the_field("phone") ?></span></p><!-- Change text -->
+					<p><span><?php the_field("phone", 54) ?></span></p><!-- Change text -->
 				</div>
 				<div class="col-md-3 col-sm-3 small_screen wow fadeInUp" data-wow-delay="0.8s">
 					<p>Email me</p><!-- Change text -->
-					<p><span><?php the_field("email") ?></span></p><!-- Change text -->
+					<p><span><?php the_field("email", 54) ?></span></p><!-- Change text -->
 				</div>
 			</div><!-- end row -->
 		</div><!-- end container -->
@@ -82,19 +82,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-3">
-					<span class="counter"><?php the_field("clients") ?></span>
+					<span class="counter"><?php the_field("clients", 54) ?></span>
 					<p>HAPPY CLIENTS</p>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<span class="counter"><?php the_field("projects") ?></span>
+					<span class="counter"><?php the_field("projects", 54) ?></span>
 					<p>PROJECTS COMPLETED</p>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<span class="counter"><?php the_field("concepts") ?></span>
+					<span class="counter"><?php the_field("concepts", 54) ?></span>
 					<p>NEW CONCEPTS</p>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<span class="counter"><?php the_field("awards") ?></span>
+					<span class="counter"><?php the_field("awards", 54) ?></span>
 					<p>AWARDS WON</p>
 				</div>
 			</div><!-- end row -->
@@ -118,7 +118,7 @@
 					</ul>
 				</div>
 			</div>
-			<!--Portfolio Items-->  
+			<!--Portfolio Items-->
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="isotope_items row">
@@ -133,12 +133,12 @@
 								}
 							}
 							?>" data-wow-delay="0.3s">
-							<img src="<?php 
+							<img src="<?php
 								$large_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-								echo $large_image_url[0];	 
-							?>" alt=""> 
+								echo $large_image_url[0];
+							?>" alt="">
 						</a>
-						<?php endwhile; endif; wp_reset_query(); ?> 
+						<?php endwhile; endif; wp_reset_query(); ?>
 						<!-- Add new image -->
 
 					</div>
@@ -191,7 +191,7 @@
 							<?php
 						}
 						wp_reset_postdata();
-					?>	
+					?>
 				</div>
 				<div class="blog_read_more wow zoomIn" data-wow-delay="0.2s">
 					<a href="http://wpdev/blog">read more</a>
